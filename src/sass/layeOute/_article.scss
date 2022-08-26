@@ -1,0 +1,66 @@
+//import utils filed
+@use '../utls';
+
+@use '../var' as *;
+
+
+.articles {
+    background-color:$Very-Light-Gray ;
+    h2 {
+        @extend %m-auto;
+        width: 200px;
+        margin-bottom: 50px;
+        
+    }
+    .flex {
+        @extend %contianer;
+        & .article-card {
+            @extend %m-auto;
+            margin-top: 15px;
+            width: 260px;
+            text-align: left;
+            font-size: 14px;
+            background-color:$White;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+            img {
+                width:100%;
+                height: 165px;
+            }
+    
+            & .text {
+                padding: 20px 10px 20px 20px;
+                span {
+                    display: block;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    letter-spacing: 2px;
+                    color: $Grayish-Blue;
+                }
+                h4 {
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                }
+            } 
+        }
+    }
+    
+}
+
+@media (min-width:800px) {
+    .articles {
+        h2 {
+            
+        }
+    }
+    .flex
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        & .article-card {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}

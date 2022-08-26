@@ -1,0 +1,73 @@
+//import utils filed
+@use '../utls';
+
+@use '../var' as *;
+
+.serves {
+    background-color: $Light-Grayish-Blue;
+    text-align: center;
+    .box {
+        @extend %contianer;
+        
+    }
+
+    .text {
+        @extend %contianer;
+        h2 {
+            @extend %m-auto;
+            margin-bottom: 15px;
+            width: 50%
+        }
+    
+        .prge {
+            @extend %m-auto;
+            width: 80%;
+        }
+    }
+    
+
+    & .cart {
+        @extend %m-auto;
+        width: 280px;
+        margin-top: 80px;
+
+        h3 {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        
+    }
+}
+
+
+@media (min-width:800px) {
+    .serves {
+        text-align: left;
+        .text {
+            h2 {
+                width: 100%;
+                margin-left: 0;
+            }
+            .prge{
+                width: 50%;
+                margin-left: 0; 
+                
+            }
+        }
+        
+        
+    }
+    .box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .cart {
+            p {
+                width: 80%;
+                font-size: 14px;
+                
+            }
+        }
+    }
+
+}
